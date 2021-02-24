@@ -7,8 +7,21 @@
 
     <script type="module" src="/build/stencil-dropdown.esm.js"></script>
     <script nomodule src="/build/stencil-dropdown.js"></script>
+    <script src="https://kit.fontawesome.com/21f11b8d1c.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <h2>Dropdown Component</h2>
+    <div style="display: block; width: 50%;">
+      <dropdown-component placeholder="Please select option" />
+    </div>
   </body>
 </html>
+
+<script>
+  const dropdownComponent = document.querySelector('dropdown-component');
+  dropdownComponent.options = [
+      {key: 1, label: 'React', value: 'react'},
+      {key: 2, label: 'Angular', value: 'angular'},
+      {key: 3, label: 'Vue', value: 'vue'},
+    ];
+</script>
