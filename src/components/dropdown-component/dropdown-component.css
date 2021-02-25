@@ -9,6 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: border-width 50mx cubic-bezier(.23, 1, .32, 1) 0ms;
+}
+.label-container:active {
+    border-bottom: 2px solid #43a047;
 }
 .arrow {
     margin-top: -6px;
@@ -18,10 +22,10 @@
     top: 40%;
     left: 0;
     width: 100%;
-    padding: 2px;
     box-sizing: border-box;
-    border: 1px solid gray;
+    border: none;
     background-color: #fff;
+    box-shadow: 0 2px 4px #b5b5b5;
     z-index: 100;
     opacity: 0;
     pointer-events: none;
@@ -35,13 +39,21 @@
 
 .option {
     display: block;
+    padding: 5px 10px;
     cursor: pointer;
+    transition: background-color .3s linear;
 }
 
-.option.active,
-.option:hover,
+.option.active {
+    background-color: rgba(0,0,0,.12);
+    color: #43a047;
+}
+
+.option:hover {
+    background-color: rgba(0,0,0,.06);
+}
 .option:active {
-    background-color: #ccc;
+    background-color: rgba(0,0,0,.20);
 }
 
 .backdrop {
